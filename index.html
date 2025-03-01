@@ -1,49 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> وِصال </title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisal</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Cover Section -->
-  <section id="cover">
-    <div class="cover-content">
-      <div class="logo">
-        <img src="Logo_TRANS.png" alt="Charity Logo">
-      </div>
-      <h1>Together, We Can Make a Difference</h1>
-      <p>Join us in our mission to create a better future for everyone.</p>
-
-      <!-- Progress Bar -->
-      <div class="progress-container">
-        <h3>Fundraising Progress</h3>
-        <div class="progress-bar">
-          <div class="progress" style="width: 45%;"></div> <!-- Set percentage here -->
+    <div class="container">
+        <img src="Logo_TRANS.png" alt="Wisal Logo" class="logo">
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar">50%</div>
         </div>
-        <p>Raised: <span id="amount-raised">20,000EGP</span> / <span id="target-amount">200,000EGP</span></p>
-      </div>
-
-      <!-- Donate Button -->
-      <button class="donate-button" onclick="openModal()">Donate Now</button>
+        <button class="button" onclick="showPopup()">Donate</button>
+        <div class="social-icons">
+            <a href="#" class="icon facebook" aria-label="Facebook"></a>
+            <a href="#" class="icon instagram" aria-label="Instagram"></a>
+            <a href="#" class="icon whatsapp" aria-label="WhatsApp"></a>
+        </div>
     </div>
-  </section>
-
-  <!-- Donation Modal -->
-  <div id="donation-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2>Donation Options</h2>
-      <p>Choose a method to support our cause:</p>
-      <ul>
-        <li><a href="https://paypal.com" target="_blank">PayPal</a></li>
-        <li><a href="https://stripe.com" target="_blank">Credit Card</a></li>
-        <li><a href="https://cryptodonation.com" target="_blank">Crypto</a></li>
-      </ul>
+    <div class="popup" id="popup">
+        <p>Donation Methods</p>
+        <button onclick="closePopup()">Close</button>
     </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
