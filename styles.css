@@ -43,7 +43,7 @@ body {
   margin: 0 auto;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(50%);
 }
 
 /* Logo */
