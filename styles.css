@@ -1,16 +1,16 @@
 /* General Styles */
-body, html {
+/* body, html {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: 'Arial', sans-serif;
-  background-color: #F4F1EA; /* Light Beige */
-  color: #0A1F3A; /* Deep Navy Blue */
+  background-color: #F4F1EA;
+  color: #0A1F3A;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
+} */
 
 /* Background Images */
 body {
