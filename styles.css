@@ -14,16 +14,16 @@ body, html {
 
 /* Background Images */
 body {
-  background-image: url('background-mobile.jpg');
+  background-image: url('background-desktop.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
-@media (orientation: landscape) {
+@media (orientation: portrait) {
   body {
-    background-image: url('background-desktop.jpg');
-    background-size: cover;
-    background-position: center;
+    background-image: url('background-mobile.jpg');
   }
 }
 
