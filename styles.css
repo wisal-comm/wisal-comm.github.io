@@ -1,18 +1,32 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
-    background: royalblue;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow: hidden;
+    text-align: center;
+    color: white;
     position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
+/* Responsive Background Images */
+body {
+    background-image: url('background-desktop.jpg');
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url('background-mobile.jpg');
+    }
+}
+
+/* Overlay for Better Readability */
 .overlay {
     position: absolute;
     top: 0;
@@ -23,23 +37,26 @@ body {
     z-index: -1;
 }
 
+/* Centered Container */
 .container {
     width: 90%;
-    max-width: 500px;
+    max-width: 450px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
 }
 
+/* Logo */
 .logo {
     max-width: 120px;
 }
 
+/* Progress Bar */
 .progress-container {
     width: 100%;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 20px;
     overflow: hidden;
     margin: 20px 0;
@@ -56,6 +73,7 @@ body {
     transition: width 0.5s ease-in-out;
 }
 
+/* Donate Button */
 .button {
     display: block;
     width: 100%;
@@ -74,6 +92,7 @@ body {
     background: #ffcc00;
 }
 
+/* Social Media Icons */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -84,15 +103,15 @@ body {
 .icon {
     width: 40px;
     height: 40px;
-    display: inline-block;
-    background-size: cover;
-    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .facebook { background-image: url('facebook-icon.png'); }
 .instagram { background-image: url('instagram-icon.png'); }
 .whatsapp { background-image: url('whatsapp-icon.png'); }
 
+/* Popup */
 .popup {
     display: none;
     position: fixed;
@@ -102,8 +121,12 @@ body {
     background: white;
     color: black;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content {
+    text-align: center;
 }
 
 .popup button {
@@ -113,18 +136,4 @@ body {
     background: red;
     color: white;
     cursor: pointer;
-}
-
-/* Background Images for Different Views */
-body {
-    background-image: url('background-desktop.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-@media (max-width: 768px) {
-    body {
-        background-image: url('background-mobile.png');
-    }
 }
