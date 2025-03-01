@@ -10,6 +10,8 @@ body {
   align-items: center;
   height: 100vh;
   overflow: hidden;
+  background: url('cover.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
 }
 
 /* Cover Section */
@@ -25,8 +27,12 @@ body {
 }
 
 #cover .logo img {
-  height: 80px;
-  margin-bottom: 1rem;
+  height: 150px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.2);
 }
 
 #cover h1 {
@@ -55,7 +61,7 @@ body {
 
 .progress {
   height: 100%;
-  background: linear-gradient(90deg, #4CAF50, #1e3c72);
+  background: linear-gradient(90deg, #4169E1, #6A5ACD);
   border-radius: 10px;
   transition: width 0.5s ease;
 }
@@ -68,17 +74,18 @@ body {
 /* Donate Button */
 .donate-button {
   padding: 12px 24px;
-  background: #4CAF50;
+  background: #4169E1;
   color: white;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .donate-button:hover {
-  background: #45a049;
+  background: #3556b7;
+  transform: scale(1.2);
 }
 
 /* Modal Styles */
@@ -141,3 +148,4 @@ body {
 .close:hover {
   color: #000;
 }
+
