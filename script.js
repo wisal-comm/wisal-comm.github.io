@@ -6,7 +6,7 @@ let targetAmount = 200000;
 let progress = (collectedAmount / targetAmount) * 100;
 
 progressBar.style.setProperty('--progress', `${progress}%`);
-progressText.textContent = `$${collectedAmount} Collected`;
+progressText.textContent = `${collectedAmount}EGP Collected`;
 
 const donateButton = document.getElementById('donateButton');
 const popup = document.getElementById('popup');
