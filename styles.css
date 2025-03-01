@@ -22,23 +22,32 @@ body {
 @media (orientation: landscape) {
   body {
     background-image: url('background-desktop.jpg');
+    background-size: cover;
+    background-position: center;
   }
 }
 
 /* Container */
 .container {
-  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 10px;
   max-width: 90%;
   width: 400px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Logo */
 .logo {
-  width: 100px;
+  width: 150px;
   margin-bottom: 20px;
+  transition: filter 0.5s ease;
+}
+
+.logo:hover {
+  filter: brightness(0.7);
 }
 
 /* Progress Bar */
@@ -52,6 +61,7 @@ body {
   background-color: #E0D7CC; /* Light Brown */
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
 
 .progress-bar::after {
@@ -64,10 +74,13 @@ body {
 }
 
 #progressText {
-  display: block;
-  margin-top: 10px;
-  font-size: 14px;
-  color: #0A1F3A; /* Deep Navy Blue */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: #FFFFFF; /* White */
+  z-index: 1; /* Ensure text is above the progress bar */
 }
 
 /* Donate Button */
@@ -129,15 +142,17 @@ body {
 }
 
 .close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
+  background-color: #8B7355; /* Rich Brown */
+  color: #FFFFFF; /* White */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
   cursor: pointer;
-  color: #8B7355; /* Rich Brown */
-  transition: color 0.3s ease;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
 }
 
 .close-button:hover {
-  color: #6B5A45; /* Darker Brown */
+  background-color: #6B5A45; /* Darker Brown */
 }
