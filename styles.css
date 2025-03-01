@@ -25,6 +25,10 @@ body {
   body {
     background-image: url('background-mobile.jpg');
   }
+  .container{
+    width: 200px;
+    max-width: 80%;
+  }
 }
 
 /* Container */
