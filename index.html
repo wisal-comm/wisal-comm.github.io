@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wisal Charity</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wisal Charity</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="overlay"></div>
-    <div class="container">
-        <img src="logo.png" alt="Wisal Logo" class="logo">
-        <div class="progress-container">
-            <div class="progress-bar" id="progress-bar">50%</div>
-        </div>
-        <button class="button" onclick="showPopup()">Donate</button>
-        <div class="social-icons">
-            <a href="#" class="icon facebook" aria-label="Facebook"></a>
-            <a href="#" class="icon instagram" aria-label="Instagram"></a>
-            <a href="#" class="icon whatsapp" aria-label="WhatsApp"></a>
-        </div>
+  <div class="container">
+    <img src="logo.png" alt="Wisal Logo" class="logo">
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+      <span id="progressText">20,000EGP Collected</span>
     </div>
-    <div class="popup" id="popup">
-        <div class="popup-content">
-            <p>Donation Methods</p>
-            <button onclick="closePopup()">Close</button>
-        </div>
+    <button class="donate-button" id="donateButton">Donate</button>
+    <div class="social-buttons">
+      <a href="#" class="social-button"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social-button"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-button"><i class="fab fa-whatsapp"></i></a>
     </div>
-    <script src="script.js"></script>
+  </div>
+
+  <!-- Donation Popup -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="close-button" id="closeButton">&times;</span>
+      <p>Donation Methods:</p>
+      <ul>
+        <li>InstaPay: muhammedelgendy@instapay</li>
+        <li>Vodafone Cash: 01080898508</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
