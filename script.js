@@ -1,16 +1,17 @@
-// script.js
-function openModal() {
-  document.getElementById('donation-modal').style.display = 'flex';
+function showPopup() {
+    document.getElementById('popup').style.display = 'block';
 }
 
-function closeModal() {
-  document.getElementById('donation-modal').style.display = 'none';
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
 }
 
-// Close modal if clicked outside
-window.onclick = function (event) {
-  const modal = document.getElementById('donation-modal');
-  if (event.target === modal) {
-    modal.style.display = 'none';
-  }
-};
+// Example function to update the progress bar dynamically
+function updateProgress(percentage) {
+    const progressBar = document.getElementById('progress-bar');
+    progressBar.style.width = percentage + '%';
+    progressBar.textContent = percentage + '%';
+}
+
+// Example: Update progress dynamically
+updateProgress(20); // Change the number to set progress
