@@ -1,15 +1,27 @@
-function showPopup() {
-    document.getElementById('popup').style.display = 'block';
-}
+const progressBar = document.getElementById('progressBar');
+const progressText = document.getElementById('progressText');
 
-function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-}
+let collectedAmount = 20000;
+let targetAmount = 200000;
+let progress = (collectedAmount / targetAmount) * 100;
 
-function updateProgress(percentage) {
-    const progressBar = document.getElementById('progress-bar');
-    progressBar.style.width = percentage + '%';
-    progressBar.textContent = percentage + '%';
-}
+progressBar.style.setProperty('--progress', `${progress}%`);
+progressText.textContent = `$${collectedAmount} Collected`;
 
-updateProgress(70);
+const donateButton = document.getElementById('donateButton');
+const popup = document.getElementById('popup');
+const closeButton = document.getElementById('closeButton');
+
+donateButton.addEventListener('click', () => {
+  popup.style.display = 'flex';
+});
+
+closeButton.addEventListener('click', () => {
+  popup.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target === popup) {
+    popup.style.display = 'none';
+  }
+});
